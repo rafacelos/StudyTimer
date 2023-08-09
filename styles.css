@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #FFF;
+  --bg-secondary: #E1E1E6;
+  --bg-terciary: #c3c3c7;
+
+  --bg-forest: #36CD6A;
+  --bg-rain: #02799D;
+  --bg-coffee: #DEB887;
+  --bg-fire: #EC5800;
+
+  --text-color: #323238;
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+html.dark {
+  --bg-primary: #323238;
+  --bg-secondary: #6363a1;
+  --text-color: #FFF;
+}
+
+.default {
+  background: var(--bg-secondary);
+}
+.fireBg {
+  background: var(--bg-fire)
+}
+.forestBg {
+  background: var(--bg-forest)
+}
+.coffeeBg {
+  background: var(--bg-coffee)
+}
+.rainBg {
+  background: var(--bg-rain)
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearence: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle,
+.hide {
+  display: none;
+}
+
+#themes .musicOn {
+  color: var(--bg-primary);
+}
+
+#themes .musicOn.fire {
+  background: var(--bg-fire);
+}
+
+#themes .musicOn.rain {
+  background: var(--bg-rain);
+}
+
+#themes .musicOn.forest {
+  background: var(--bg-forest);
+}
+
+#themes .musicOn.coffee {
+  background: var(--bg-coffee);
+}
+
+body, input, button {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-primary);
+}
+
+body {
+  color: var(--text-color);
+  height: 100vh;
+  display: grid;
+}
+
+main.flex {
+  justify-content: space-evenly;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+header, footer {
+  margin: 0 auto;
+
+  background: var(--bg-secondary);
+  width: 100%;
+  height: 50px;
+}
+
+header {
+  justify-self: start;
+  position: relative;
+}
+
+header i {
+  font-size: 3.8rem;
+}
+
+#toggle-dark-light {
+  position: absolute;
+  right: 2.5rem;
+  widht: 4.4rem;
+  height: 4.4rem;
+}
+
+#toggle-dark-light button {
+  font-size: 3.6rem;
+  background: transparent;
+  color: var(--text-color)
+}
+
+#clock {
+  display: flex;
+  justify-content: center
+}
+
+h1 {
+  margin-left: 1.2rem;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  letter-spacing: 0.05em;
+}
+
+span {
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+#controls {
+  margin-top: 3.2rem;
+  justify-content: space-around;
+}
+
+#controls button {
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 5.8rem;
+}
+
+#controls button:hover,
+.toggle-dark-light button:hover {
+  scale: 1.05;
+  color: var(--bg-fire);
+}
+
+#themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+#themes button {
+  width: 13.8rem;
+  height: 15.2rem;
+  background: var(--bg-secondary);
+  border-radius: 2.4rem;
+
+  color: var(--text-color);
+  font-size: 5.6rem;
+
+  transition: scale .2s ease-in-out;
+}
+
+#themes button:hover {
+  scale: 1.05;
+  border: 5px solid var(--bg-terciary);
+}
+
+#themes .forest:hover {
+  background: var(--bg-forest)
+}
+
+#themes .rain:hover {
+  background: var(--bg-rain)
+}
+
+#themes .coffee:hover {
+  background: var(--bg-coffee)
+}
+
+#themes .fire:hover {
+  background: var(--bg-fire)
+}
+
+footer {
+  align-self: end;
+  gap: 1rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a svg {
+  margin: .6rem 0 0 .6rem;
+}
+
+a svg:hover {
+  scale: 1.05;
+}
+
+@media (max-width: 1095px) {
+  main {
+    flex-direction: column;
+    gap: 4rem;
+    margin: 3rem;
+  }
+}
