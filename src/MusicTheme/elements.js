@@ -1,1 +1,5 @@
 export const themes = document.getElementById('themes')
+export const forestBar = document.getElementById('forestBar')
+export const rainBar = document.getElementById('rainBar')
+export const coffeeBar = document.getElementById('coffeeBar')
+export const fireBar = document.getElementById('fireBar')

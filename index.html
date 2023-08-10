@@ -55,15 +55,27 @@
     <div id="themes">
       <button data-action="musicTheme" class="forest flex ph ph-tree">
         <span class="sr-only">Forest music Button</span>
+        <div class="volumeWrapper">
+          <input data-action="setVolume" id="forestBar" type="range" min="0" max="100" class="volumeControl" step="1" value="0"/>
+        </div>
       </button>
       <button data-action="musicTheme" class="rain flex ph ph-cloud-rain">
         <span class="sr-only">Rain music Button</span>
+        <div class="volumeWrapper">
+          <input data-action="setVolume" id="rainBar" type="range" min="0" max="100" class="volumeControl" step="1" value="0"/>
+        </div>
       </button>
-      <button data-action="musicTheme" class="coffee flex ph ph-coffee">
+      <button data-action="musicTheme" class="coffee flex ph ph-coffee"/>
         <span class="sr-only">Coffee music Button</span>
+        <div class="volumeWrapper">
+          <input data-action="setVolume" id="coffeeBar" type="range" min="0" max="100" class="volumeControl" step="1" value="0"/>
+        </div>
       </button>
       <button data-action="musicTheme" class="fire flex ph ph-fire">
         <span class="sr-only">Fire music Button</span>
+        <div class="volumeWrapper">
+          <input data-action="setVolume" id="fireBar" type="range" min="0" max="100" class="volumeControl" step="1" value="0"/>
+        </div>
       </button>
     </div>
   </main>

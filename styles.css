@@ -183,16 +183,22 @@ span {
   height: 15.2rem;
   background: var(--bg-secondary);
   border-radius: 2.4rem;
+  padding: 2.4rem;
 
   color: var(--text-color);
   font-size: 5.6rem;
 
   transition: scale .2s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #themes button:hover {
   scale: 1.05;
   border: 5px solid var(--bg-terciary);
+  color: var(--bg-primary);
 }
 
 #themes .forest:hover {
@@ -209,6 +215,20 @@ span {
 
 #themes .fire:hover {
   background: var(--bg-fire)
+}
+
+#themes button .volumeWrapper {
+  height: 2rem;
+  display: flex;
+}
+
+#themes button .volumeWrapper .volumeControl {
+  width: 100%;
+  accent-color: var(--text-color);
+}
+
+#themes button:hover .volumeWrapper .volumeControl {
+  accent-color: var(--bg-primary);
 }
 
 footer {
