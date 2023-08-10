@@ -6,7 +6,7 @@ export function registerTheme(){
   themes.addEventListener('click', (event) => {
     event.stopPropagation()
     const selectedAction = event.target.dataset.action
-    if(typeof actions[selectedAction] != "function") {
+    if(typeof actions[selectedAction] != "function" || selectedAction == "setVolume") {
       return
     }
     const selectedElement = event.target
